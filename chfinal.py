@@ -866,7 +866,7 @@ class NetworkCaptureApp(QMainWindow):
         return kmlPts
 
     def convertToKML(self, pcapFileName):
-        self.ip2location = IP2Location('/home/diablo/geosniffx/IP2LOCATION/IP2LOCATION-LITE-DB11.BIN')
+        self.ip2location = IP2Location('/home/diablo/geosniffx/IP2LOCATION/IP2LOCATION-LITE-DB11.BIN') #add your database location for geodecoding 
         try:
             with open(pcapFileName, 'rb') as f:
                 pcap = dpkt.pcap.Reader(f)
